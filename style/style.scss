@@ -23,7 +23,7 @@ html{
     overflow-x: hidden;
     body{
         background-color: black;
-        overflow-x: hidden;
+        
         h1,h2,h3{
             font-size: 45px;
             color: white;
@@ -819,6 +819,7 @@ main{
         background: rgba(0, 0, 0, 0.4);
         backdrop-filter: blur(17px);
         overflow-y: scroll;
+
         .popup-form{
             display: flex;
             flex-direction: column;
@@ -826,6 +827,7 @@ main{
             background-color: white;
             width:60% ;
             border-radius: 20px;
+            margin-top: 50px;
             @include breakpoint(md){
                 width: 80%;
             }
@@ -1105,7 +1107,11 @@ main{
             
            
            
-        }
+    }
+    .popup::-webkit-scrollbar {
+        width: 0px;         
+    }
+ 
 }
    
 

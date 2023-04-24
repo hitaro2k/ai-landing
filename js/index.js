@@ -28,6 +28,7 @@ function openForm(){
     formBtn.forEach((item) =>{
         item.addEventListener("click", ()=>{
             form.style.display = "flex"
+            
             doc.style.position = "fixed"
         })
     })

@@ -28,7 +28,6 @@ html {
 }
 html body {
   background-color: black;
-  overflow-x: hidden;
 }
 html body h1, html body h2, html body h3 {
   font-size: 45px;
@@ -909,6 +908,7 @@ main .popup .popup-form {
   background-color: white;
   width: 60%;
   border-radius: 20px;
+  margin-top: 50px;
 }
 @media (max-width: 767.98px) {
   main .popup .popup-form {
@@ -1195,4 +1195,7 @@ main .popup .popup-form .content-bottom .right-side .input-label .text-submit {
   line-height: 22px;
   color: #000000;
   margin-left: 20px;
+}
+main .popup::-webkit-scrollbar {
+  width: 0px;
 }
