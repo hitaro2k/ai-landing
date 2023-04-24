@@ -590,6 +590,11 @@ main .whitelist .whitelist-bg {
 main .whitelist .whitelist-bg .whitelist-bg__image {
   width: 100%;
 }
+@media (max-width: 767.98px) {
+  main .whitelist .whitelist-bg .whitelist-bg__image {
+    display: none;
+  }
+}
 main .whitelist .container {
   margin-top: 170px;
 }
@@ -806,6 +811,11 @@ main .faq .faq-bg {
 }
 main .faq .faq-bg .faq-bg__image {
   width: 100%;
+}
+@media (max-width: 767.98px) {
+  main .faq .faq-bg .faq-bg__image {
+    display: none;
+  }
 }
 main .faq .container .faq-top {
   margin-top: 420px;

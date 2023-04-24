@@ -520,6 +520,9 @@ main{
             }
             .whitelist-bg__image{
                 width: 100%;
+                @include breakpoint(md){
+                    display: none;
+                }
             }
         }
         .container{
@@ -718,6 +721,9 @@ main{
             }
             .faq-bg__image{
                 width: 100%;
+                @include breakpoint(md){
+                    display: none;
+                }
             }
             
         }
