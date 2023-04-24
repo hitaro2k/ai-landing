@@ -23,33 +23,32 @@
   font-family: "SpaceMono";
   src: url(/fonts/SpaceMono-Bold.ttf) format("truetype");
 }
-body {
-  background-color: black;
+html {
+  overflow-x: hidden;
 }
-
-h1, h2, h3 {
+html body {
+  background-color: black;
+  overflow-x: hidden;
+}
+html body h1, html body h2, html body h3 {
   font-size: 45px;
   color: white;
   font-family: "SpaceMono";
 }
-
-p {
+html body p {
   color: white;
   font-family: "Outfit";
 }
-
-a {
+html body a {
   color: white;
   font-family: "Outfit";
 }
-
-h4, h5, h6 {
+html body h4, html body h5, html body h6 {
   font-size: 34px;
   color: white;
   font-family: "SpaceMono";
 }
-
-ul {
+html body ul {
   list-style: none;
   margin: 0px;
   padding: 0px;

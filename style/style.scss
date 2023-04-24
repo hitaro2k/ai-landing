@@ -19,31 +19,37 @@
     src: url(/fonts/SpaceMono-Bold.ttf) format('truetype');
 }
 
-body{
-    background-color: black;
-}
-h1,h2,h3{
-    font-size: 45px;
-    color: white;
-    font-family: "SpaceMono";
-}
-p{
-    color: white;
-    font-family:"Outfit";
-}
-a{
-    color: white;
-    font-family:"Outfit";
-}
-h4,h5,h6{
-    font-size: 34px;
-    color: white;
-    font-family: "SpaceMono";
-}
-ul{
-    list-style: none;
-    margin: 0px;
-    padding: 0px;
+html{
+    overflow-x: hidden;
+    body{
+        background-color: black;
+        overflow-x: hidden;
+        h1,h2,h3{
+            font-size: 45px;
+            color: white;
+            font-family: "SpaceMono";
+        }
+        p{
+            color: white;
+            font-family:"Outfit";
+        }
+        a{
+            color: white;
+            font-family:"Outfit";
+        }
+        h4,h5,h6{
+            font-size: 34px;
+            color: white;
+            font-family: "SpaceMono";
+        }
+        ul{
+            list-style: none;
+            margin: 0px;
+            padding: 0px;
+        }
+    }
+  
+    
 }
 
 main{

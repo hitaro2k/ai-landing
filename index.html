@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="/style/normalize.css">
     <link rel="stylesheet" href="/style/style.css">
 </head>
@@ -141,7 +141,7 @@
                     </h2>
                   
                 </div>
-                <div class="help__top-block">
+            <div class="help__top-block wow animate__animated animate__fadeInLeft">
                     <img src="/img/help-phoneFRST.webp" alt="" class="help__img-wrapper">
                     <div class="block-text">
                         <div class="title-wrapper">
@@ -162,7 +162,7 @@
                     </div> 
                     <img src="/img/help-phoneFRST.webp" alt="" class="help__img-wrapper__tablet">
             </div>
-            <div class="help__center-block">
+            <div class="help__center-block wow animate__animated animate__fadeInRight">
                 <div class="block-text">
                     <div class="title-wrapper">
                         <span class="point"></span>
@@ -189,7 +189,7 @@
             </div>
 
 
-            <div class="help__bottom-block">
+            <div class="help__bottom-block wow animate__animated animate__fadeInLeft">
                 <img src="/img/help-phoneTHRD.webp" alt="" class="help__img-wrapper">
 
                 <div class="block-text">
@@ -598,6 +598,10 @@
         
     </main>
    
+    <script src="/js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
     <script src="/js/index.js"></script>
 </body>
 </html>
