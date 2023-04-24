@@ -34,19 +34,23 @@ html body h1, html body h2, html body h3 {
   font-size: 45px;
   color: white;
   font-family: "SpaceMono";
+  font-display: swap;
 }
 html body p {
   color: white;
   font-family: "Outfit";
+  font-display: swap;
 }
 html body a {
   color: white;
   font-family: "Outfit";
+  font-display: swap;
 }
 html body h4, html body h5, html body h6 {
   font-size: 34px;
   color: white;
   font-family: "SpaceMono";
+  font-display: swap;
 }
 html body ul {
   list-style: none;
