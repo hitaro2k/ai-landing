@@ -893,6 +893,9 @@ main .popup .popup-form .popup-close__wrapper {
   align-items: flex-end;
   padding-top: 30px;
 }
+main .popup .popup-form .popup-close__wrapper .popup__close {
+  cursor: pointer;
+}
 main .popup .popup-form .content-top {
   width: 80%;
   display: flex;

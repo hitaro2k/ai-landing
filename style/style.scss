@@ -810,6 +810,9 @@ main{
                 width: 90%;
                 align-items: flex-end;
                 padding-top: 30px;
+                .popup__close{
+                    cursor: pointer;
+                }
             }
             .content-top{
                 width: 80%;
