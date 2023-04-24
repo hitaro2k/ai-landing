@@ -1,0 +1,1082 @@
+@import "../style/mixin.scss";
+@font-face {
+    font-family:"Outfit" ;
+    src: url(/fonts/Outfit-Regular.ttf) format('truetype');
+    font-weight: normal;
+}
+@font-face {
+    font-family:"Outfit" ;
+    src: url(/fonts/Outfit-Medium.ttf) format('truetype');
+    font-weight: medium;
+}
+@font-face {
+    font-family:"Outfit" ;
+    src: url(/fonts/Outfit-ExtraBold.ttf) format('truetype');
+    font-weight: bold;
+}
+@font-face {
+    font-family:"SpaceMono" ;
+    src: url(/fonts/SpaceMono-Bold.ttf) format('truetype');
+}
+
+body{
+    background-color: black;
+}
+h1,h2,h3{
+    font-size: 45px;
+    color: white;
+    font-family: "SpaceMono";
+}
+p{
+    color: white;
+    font-family:"Outfit";
+}
+a{
+    color: white;
+    font-family:"Outfit";
+}
+h4,h5,h6{
+    font-size: 34px;
+    color: white;
+    font-family: "SpaceMono";
+}
+ul{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+main{
+   
+    height: 100%;
+    .promo{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        background-image: url(/img/MaskGroup.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        padding-top: 140px;
+        .container{
+            display: flex;
+            flex-direction: column;
+            .promo-top{
+                display: flex;
+                flex-direction: row;
+                gap: 0px 100px;
+                @include breakpoint(lg){
+                    flex-direction: column;
+                    align-items: center;
+                }
+                .promo-text{
+                    display: flex;
+                    flex-direction: column;
+                    width: 70%;
+                    @include breakpoint(lg){
+                        align-items: center;
+                    }
+                    .promo-header{
+                        width: 468px;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        background-position: center;
+                        background-image: url(/img/rectangle-header.svg);
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        @include breakpoint (xs){
+                            width: 280px;
+                            height: 30px;
+                        }
+                        .promo-header__text{
+                            color: white;
+                            font-family:"SpaceMono";
+                            @include breakpoint(xs){
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                    
+                    .title{
+                        color: white;
+                        font-family:"SpaceMono";
+                        line-height:1.8em;
+                        font-size: 43px;
+                        @include breakpoint(lg){
+                            text-align: center;
+                        }
+                        @include breakpoint(md){
+                            font-size: 30px;
+                        }
+                        @include breakpoint(xs){
+                            font-size: 20px;
+                        }
+                    }
+                    .subtitle{
+                        margin-top: 30px;
+                        color: white;
+                        font-family: 'Outfit';
+                        font-weight: 400;
+                        font-size: 18px;
+                        line-height: 34px;
+                        @include breakpoint(lg){
+                            text-align: center;
+                        }
+                        @include breakpoint(xs){
+                            font-size: 12px;
+                        }
+                    }
+                    
+                }
+                .promo__img-wrapper{
+                    width: 45%;
+                    .promo-image{
+                        @include breakpoint(xs){width: 200px;}
+                       
+                    }
+                    @include breakpoint(lg){
+                        width: 100%;
+                        margin-top: 50px;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                    }
+                    @include breakpoint(xs){}
+                }
+            }
+           .promo-bottom{
+                
+                margin-top: 100px;
+                .promo__star-list{
+                    display: flex;
+                    flex-direction: row;
+                    gap: 0px 90px;
+                    @include breakpoint(lg){
+                        gap: 0px 0px;
+                    }
+                    @include breakpoint(md){
+                        flex-direction: column;
+                        align-items: center;
+                    }
+                    .star-item{
+                        @include breakpoint(md){
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                        }
+                        .star-title{
+                            font-family: 'Outfit';
+                            font-weight: 400;
+                            font-size: 15px;
+                            line-height: 28px;
+                            color: #FFFFFF;
+                            @include breakpoint(sm){
+                                text-align: center;
+                            }
+                        }
+                    }
+                   
+                }
+    
+           }
+          
+        }
+    
+    }
+
+    .help{
+        width: 100%;
+        height: 100%;
+        margin-top: 180px;
+        position: relative;
+        .help-bg{
+            position: absolute;
+            width: 100%;
+            z-index: -1;
+            margin-top: 100px;
+            opacity: 0.7;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            .title-wrapper{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                .title{
+                    font-size: 42px;
+                    text-align: center;
+                    .title-block{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        width: 705px;
+                        height: 75px;                
+                        background-position: center;
+                        background-image: url(/img/rectangle-header.svg);
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        @include breakpoint(md){
+                            width: 475px;
+                            height: 51px;
+                            font-size: 25px;
+                        }
+                        @include breakpoint(xs){
+                            width: 300px;
+                            height: 33px;
+                            font-size: 13px;
+                        }
+                        @include breakpoint(xss){
+                            width: 266px;
+                            height: 29px;
+                        }
+                    }
+                    .title-span{
+                        @include breakpoint(md){
+                            font-size: 25px;
+                        }
+                        @include breakpoint(xs){
+                            font-size: 15px;
+                        }
+                    }
+                }
+               
+               
+            }
+            .help__top-block{
+                display: flex;
+                flex-direction: row;
+                margin-top: 70px;
+                @include breakpoint(lg){
+                    flex-direction:column;
+                    align-items: center;
+                }
+                
+                .block-text{
+                    display: flex;
+                    flex-direction: column;
+                    margin-left: 70px;
+                    margin-top: 60px;
+                    @include breakpoint(md){
+                        margin-left: 0px;
+                    }
+                    .title-wrapper{
+                        display: flex;
+                        flex-direction: row;
+                        align-items: flex-start;
+                        .point{
+                            content: "";
+                            display: block;
+                            width: 7px;
+                            height: 24px;
+                            background: #FFFFFF;
+                            margin-top: 10px;
+                            margin-right: 10px;
+                            @include breakpoint(md){
+                                display: none;
+                            }
+                        }
+                        .title{
+                            margin: 0;
+                            @include breakpoint(md){
+                                font-size: 39px;
+                            }
+                            @include breakpoint(sm){
+                                font-size: 25px;
+                            }
+                            @include breakpoint(xs){
+                                font-size: 17px;
+                            }
+                        }
+                    }
+                    .list{
+                        
+                        .list-item{
+                            display: flex;
+                            flex-direction: row;
+                            align-items: flex-start;
+                            margin-top: 40px;
+                            .list-item__text{
+                                font-family: "Outfit";
+                                font-size: 18px;
+                                line-height: 1.7em;
+                                margin: 0;
+                                @include breakpoint(xs){
+                                    font-size: 13px;
+                                }
+                            }
+                        }
+                    }
+                    
+                }
+                .help__img-wrapper__tablet{
+                    display: none;
+                    @include breakpoint(lg){
+                        display: block;
+                        width: 300px;
+                        margin-top:70px;
+                        @include breakpoint(xs){
+                            width: 200px;
+                        }
+                    }
+                }
+                .help__img-wrapper{
+                    @include breakpoint(lg){
+                        display: none;
+
+                    }
+                }
+            }
+
+            .help__center-block{
+                display: flex;
+                flex-direction: row;
+                margin-top: 150px;
+                @include breakpoint(lg){
+                    flex-direction:column;
+                    align-items: center;
+                }
+                .block-text{
+                    display: flex;
+                    flex-direction: column;
+                    margin-top: 60px;
+                    margin-left: 20px;
+                    margin-right: 60px;
+                    @include breakpoint(md){
+                        margin-left: 0px;
+                        margin-right: 0px;
+                    }
+                    .title-wrapper{
+                        display: flex;
+                        flex-direction: row;
+                        align-items: flex-start;
+                        .point{
+                            content: "";
+                            display: block;
+                            width: 7px;
+                            height: 24px;
+                            background: #FFFFFF;
+                            margin-top: 10px;
+                            margin-right: 10px;
+                            @include breakpoint(md){
+                                display: none;
+                            }
+                        }
+                        .title{
+                            margin: 0;
+                            @include breakpoint(md){
+                                font-size: 39px;
+                            }
+                            @include breakpoint(sm){
+                                font-size: 25px;
+                            }
+                            @include breakpoint(xs){
+                                font-size: 17px;
+                            }
+                        }
+                    }
+                    .list{
+                        
+                        .list-item{
+                            display: flex;
+                            flex-direction: row;
+                            align-items: flex-start;
+                            margin-top: 40px;
+                            .list-item__text{
+                                font-family: "Outfit";
+                                font-size: 18px;
+                                line-height: 1.7em;
+                                margin: 0;
+                                @include breakpoint(xs){
+                                    font-size: 13px;
+                                }
+                            }
+                        }
+                    }
+                    
+                }
+                .help__img-wrapper{
+                    @include breakpoint(lg){
+                        width: 300px;
+                        margin-top:70px;
+                        @include breakpoint(xs){
+                            width: 200px;
+                        }
+                    }
+                    
+                }
+            }
+
+            .help__bottom-block{
+                display: flex;
+                flex-direction: row;
+                margin-top: 150px;
+                @include breakpoint(lg){
+                    flex-direction:column;
+                    align-items: center;
+                }
+                .block-text{
+                    display: flex;
+                    flex-direction: column;
+                    margin-left: 70px;
+                    align-items: flex-start;
+                    @include breakpoint(md){
+                        margin-left: 0px;
+                    }
+                    .title-wrapper{
+                        display: flex;
+                        flex-direction: row;
+                        align-items: flex-start;
+                        .point{
+                            content: "";
+                            display: block;
+                            width: 7px;
+                            height: 24px;
+                            background: #FFFFFF;
+                            margin-top: 10px;
+                            margin-right: 10px;
+                            @include breakpoint(md){
+                                display: none;
+                            }
+                        }
+                        .title{
+                            margin: 0;
+                            @include breakpoint(md){
+                                font-size: 39px;
+                            }
+                            @include breakpoint(sm){
+                                font-size: 25px;
+                            }
+                            @include breakpoint(xs){
+                                font-size: 17px;
+                            }
+                        }
+                    }
+                    .list{
+                        
+                        .list-item{
+                            display: flex;
+                            flex-direction: row;
+                            align-items: flex-start;
+                            margin-top: 40px;
+                            .list-item__text{
+                                font-family: "Outfit";
+                                font-size: 18px;
+                                line-height: 1.7em;
+                                margin: 0;
+                                @include breakpoint(xs){
+                                    font-size: 13px;
+                                }
+                            }
+                        }
+                    }
+                    
+                }
+                .help__img-wrapper__tablet{
+                    display: none;
+                    @include breakpoint(lg){
+                        display: block;
+                        width: 300px;
+                        margin-top:70px;
+                    }
+                    @include breakpoint(xs){
+                        width: 200px;
+                    }
+                }
+                .help__img-wrapper{
+                    @include breakpoint(lg){
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    .whitelist{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        .whitelist-bg{
+            width: 100%;
+            position: absolute;
+            z-index: -1;
+            margin-top: 100px;
+            opacity: 0.3;
+            .whitelist-bg__image{
+                width: 100%;
+            }
+        }
+        .container{
+            margin-top: 170px;
+            @include breakpoint(md){
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .whitelist-top{
+                @include breakpoint(md){
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+                .title{
+                    color: white;
+                    font-size: 35px;
+                    font-family: "SpaceMono";
+                    @include breakpoint(md){
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        text-align: center;
+                    }
+                    @include breakpoint(md){
+                        font-size: 25px;
+                    }
+                    @include breakpoint(xs){
+                        font-size: 18px;
+                    }
+                    @include breakpoint(xss){
+                        font-size: 14px;
+                    }
+                    .title-span{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;                                       
+                        width: 760px;
+                        height: 82px;
+                        margin: 0;             
+                        background-position: center;
+                        background-image: url(/img/rectangle-header.svg);
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        @include breakpoint(lg){
+                            width: 612px;
+                            height: 66px;
+                            font-size: 35px;
+                        }
+                        @include breakpoint(md){
+                            width: 480px;
+                            height: 53px;
+                            font-size: 25px;
+                        }
+                        @include breakpoint(xs){
+                            width: 330px;
+                            height: 36px;
+                            font-size: 18px;
+                        }
+                        @include breakpoint(xss){                        
+                            width: 270px;
+                            height: 29px;
+                            font-size: 14px;
+                        }
+                    }
+                    
+                }
+            }
+            .whitelist-bottom{
+                display: flex;
+                flex-direction: row;
+                margin-top: 200px;
+                justify-content: space-between;
+                @include breakpoint(md){
+                    display: flex;
+                    flex-direction: column;
+                }
+                .left-side{
+                    height: 100%;
+                    width: 100%;
+                    border: 2px solid white;
+                    border-radius: 10px;
+                    @include breakpoint(md){
+                        margin-top: 40px;
+                    }
+                    .list{
+                        .list-item{
+                            border-bottom: 2px solid white;
+                            border-radius: 5px;
+                            padding-top: 10px;
+                            padding-bottom: 10px;
+                            .list-item__header{
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;
+                                justify-content: space-between;
+                                .list-item__title-icon{
+                                    display: flex;
+                                    flex-direction: row;
+                                    margin-left: 20px;
+                                    align-items: center;
+                                    .list-title{
+                                        margin-left: 20px;
+                                    }
+                                }
+                                .arrow-wrapper{
+                                    margin-right: 30px;
+                                    cursor: pointer;
+                                }
+                            }
+                            .list-text{
+                                display: none;
+                                font-size: 14px;
+                                margin-left: 20px;
+                                color: rgba(255, 255, 255, 0.5);
+
+                            }
+                        }
+                    }
+                    
+                }
+                .right-side{
+                    width: 50%;
+                    margin-left: 30px;
+                    @include breakpoint(md){
+                        display: none;
+                    }
+                    .title{
+                        margin: 0px;
+                        @include breakpoint(lg){
+                            font-size: 40px;
+                        }
+                        .span-title{
+                            margin: 0;             
+                            background-position: center;
+                            background-image: url(/img/square-how.png);
+                            background-repeat: no-repeat;
+                            background-size: cover;
+                        }
+                    }
+                    .whitelist-image{
+                        width: 100%;
+                        margin-top: 60px;
+                        @include breakpoint(lg){
+
+                        }
+                    }
+                }
+                .right-side__tablet{
+                    display: none;
+                    @include breakpoint(md){
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                    }
+                    .title{
+                        margin: 0px;
+                        @include breakpoint(sm){     
+                            font-size: 30px;
+                        }
+                        .span-title{
+                            margin: 0;             
+                            background-position: center;
+                            background-image: url(/img/square-how.png);
+                            background-repeat: no-repeat;
+                            background-size: cover;
+                        }
+                    }
+                    .whitelist-image{
+                        width: 90%;
+                        margin-top: 60px;
+                        @include breakpoint(lg){
+
+                        }
+                    }   
+                }
+            }
+            
+        }
+    }
+    
+    .faq{
+        padding-top: 150px;
+        width: 100%;
+        height: 100%;
+        .faq-bg{
+            width: 100%;
+            position: absolute;
+            z-index: -1;
+            opacity: 0.4;
+            .faq-bg__image{
+                width: 100%;
+                
+            }
+        }
+        .container{
+            .faq-top{
+                margin-top: 420px;
+              .title{
+                @include breakpoint(md){
+                    font-size: 30px;
+                }
+              }  
+            }
+           
+            .faq-bottom{
+                margin-top: 200px;
+                .list{
+                    border: 2px solid white;
+                    border-radius: 5px;
+                    .list-item{
+                        border-bottom: 2px solid white;
+                        border-radius: 5px;
+                        padding-top: 10px;
+                        padding-bottom: 10px;
+                        height: 50px;
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: space-between;
+                        @include breakpoint(sm){
+                            height: 100%; 
+                        }
+                        
+                        .list-item__num-title{
+                           
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            width: 80%;
+                            .list-num{
+                                font-weight: 700;
+                                font-size: 25px;
+                                line-height: 71px;
+                                color: #633DFF;
+                                margin-left: 30px;
+                                
+                            }
+                            .list-title{
+                                color: white; 
+                                margin-left: 30px;
+                            }
+                        }
+                    .arrow-wrapper{
+                        margin-right: 30px;
+                    }
+                    }
+                    
+                }
+
+            }
+        }
+       
+    }
+    .whitelist-button{
+        margin-top: 60px;
+        width: 235px;
+        height: 72px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-family: "Outfit";
+        font-weight: 500;
+        background: rgba(255, 255, 255, 0.01);
+        border: 2px solid #633DFF;
+        box-shadow: 0px 0px 64px rgba(99, 61, 255, 0.55);
+        backdrop-filter: blur(2px);
+        border-radius: 7px;
+        cursor: pointer;
+    }
+    .popup{
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        z-index: 9999;
+        background: rgba(0, 0, 0, 0.4);
+        backdrop-filter: blur(17px);
+        overflow-y: scroll;
+        .popup-form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: white;
+            width:60% ;
+            border-radius: 20px;
+            @include breakpoint(md){
+                width: 80%;
+            }
+           
+            .popup-close__wrapper{
+                display: flex;
+                flex-direction: column;
+                width: 90%;
+                align-items: flex-end;
+                padding-top: 30px;
+            }
+            .content-top{
+                width: 80%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                @include breakpoint(mlg){
+                    width: 95%;
+                }
+                @include breakpoint(lg){
+                    flex-direction: column;
+                }
+                @include breakpoint(md){
+                    width: 100%;
+                    align-items: center;
+                }
+                .left-side{
+                    display: flex;
+                    flex-direction: column;
+                    width: 50%;
+                    @include breakpoint(lg){
+                        width: 90%;
+                    }
+                    .title{
+                        color: black;
+                        margin: 0px;
+                        @include breakpoint(mlg){
+                            font-size: 40px;
+                        }
+                        @include breakpoint(sm){
+                            font-size: 25px;
+                        }                    
+                    }
+                    .input-block{
+                        display: flex;
+                        flex-direction: column;
+                        margin-top: 15px;
+                        @include breakpoint(mlg){
+                            margin-top: 21px;
+                        }
+                        .input__title{
+                            color: black;
+                        }
+                        .input__wrapper{
+                            background-color: white;
+                            width: 90%;
+                            height: 50px;
+                            border: 1px solid #000000;
+                            border-radius: 7px;
+                            display:flex;
+                            flex-direction:column;
+                            justify-content: center;
+                          
+                            .input-popup{
+                                outline: none;
+                                background-color: transparent;
+                                font-family: "Outfit";
+                                border: none;
+                                margin-left: 10px;
+                            }
+                        }
+                    }
+                    
+                }
+                .right-side{
+                    display: flex;
+                    flex-direction: column;
+                    width: 50%;
+                    @include breakpoint(lg){
+                        width: 90%;
+                    }
+                    .title{
+                        color: black;
+                        font-weight: 700;
+                        font-size: 20px;
+                        line-height: 67px;
+                        margin: 0px;
+                        font-family: "SpaceMono";
+                        @include breakpoint(sm){
+                            font-size: 15px;
+                            line-height: 40px;
+                            margin-top: 15px;
+                        }
+                    }
+                    .input-block{
+                        display: flex;
+                        flex-direction: column;
+                        .input__title{
+                            color: black;
+                        }
+                        .input__wrapper{
+                            background-color: white;
+                            width: 90%;
+                            height: 50px;
+                            border: 1px solid #000000;
+                            border-radius: 7px;
+                            display:flex;
+                            flex-direction:column;
+                            justify-content: center;
+                            .input-popup{
+                                outline: none;
+                                background-color: transparent;
+                                font-family: "Outfit";
+                                border: none;
+                                margin-left: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+            .popup__center{
+                width: 80%;
+                .select-title{
+                    color: black;
+                }
+                .popup-select{
+                    width: 95%;
+                    height: 50px;
+                    font-family: "Outfit";
+                    outline: none;                                           
+                    border: 1px solid #000000;
+                    border-radius: 7px;
+                    color: #B6B6B6;
+                }
+            }
+            .content-bottom{
+                width: 80%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                @include breakpoint(lg){
+                    flex-direction: column;
+                }
+                @include breakpoint(md){
+                    width: 100%;
+                    align-items: center;
+                }
+                    .left-side{
+                        width: 50%;
+                        @include breakpoint(lg){
+                            width: 90%;
+                        }
+                        .input-block{
+                            display: flex;
+                            flex-direction: column;
+                            margin-top: 15px;
+                            .input__title{
+                                color: black;
+                                width: 80%;
+                            }
+                            .input__wrapper{
+                                background-color: white;
+                                width: 90%;
+                                height: 50px;
+                                border: 1px solid #000000;
+                                border-radius: 7px;
+                                display:flex;
+                                flex-direction:column;
+                                justify-content: center;
+                              
+                                .input-popup{
+                                    outline: none;
+                                    background-color: transparent;
+                                    font-family: "Outfit";
+                                    border: none;
+                                    margin-left: 10px;
+                                }
+                            }
+                        }
+                        .button-submit{
+                            width: 90%;
+                            height: 75px;
+                            color: black;             
+                            border: 2px solid #633DFF;
+                            border-radius: 7px;
+                            font-family: "Outfit";
+                            background-color: white;
+                            margin-top: 30px;
+                        }
+                    }
+                    .right-side{
+                        width: 50%;
+                        @include breakpoint(lg){
+                            width: 90%;
+                        }
+                        .input-block{
+                            display: flex;
+                            flex-direction: column;
+                            margin-top: 34px;
+                            
+                            .input__title{
+                                color: black;
+                            }
+                            .input__wrapper{
+                                background-color: white;
+                                width: 90%;
+                                height: 50px;
+                                border: 1px solid #000000;
+                                border-radius: 7px;
+                                display:flex;
+                                flex-direction:column;
+                                justify-content: center;
+                               
+                                .input-popup{
+                                    outline: none;
+                                    background-color: transparent;
+                                    font-family: "Outfit";
+                                    border: none;
+                                    margin-left: 10px;
+                                }
+                            }
+                        }
+                         
+                    .input-label{
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        margin-top: 30px;
+                        input[type="checkbox"] {
+                            appearance: none;
+                            -webkit-appearance: none;
+                            -moz-appearance: none;
+                            width: 40px;
+                            height: 19px;
+                            border: 2px solid #000; 
+                            outline: none;
+                            cursor: pointer;
+                            position: relative;
+                            background-color: #fff; 
+                            border-radius: 5px;
+                          }
+                          
+                         
+                          input[type="checkbox"]:checked::before {
+                            content: "\2713"; 
+                            font-size: 19px;
+                            color: #000; 
+                            position: absolute;
+                            top: -2px;
+                            left: 1px;
+                          }
+                          
+                        
+                          label {
+                            cursor: pointer;
+                          }
+                        .text-submit{
+                            font-weight: 400;
+                            font-size: 15px;
+                            line-height: 22px;
+                            color: #000000;
+                            margin-left: 20px;
+                        }
+                    }
+                    }
+                    
+                    
+
+
+                }
+                
+              
+            }
+            
+           
+           
+        }
+}
+   
+
