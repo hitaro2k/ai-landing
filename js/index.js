@@ -8,26 +8,27 @@ let doc = document.querySelector("html")
 
 var arrowWrappers = document.getElementsByClassName('arrow-wrapper');
 
-    for (var i = 0; i < arrowWrappers.length; i++) {
-        arrowWrappers[i].addEventListener('click', toggleListTextDisplay);
-    }
-    function toggleListTextDisplay(event) {
-        var listItemHeader = event.target.closest('.list-item__header');
-        var listText = listItemHeader.nextElementSibling;
-       
-        if (listText.style.display === 'none' || listText.style.display === '') {
-            listText.style.display = 'block';
-            for (var i = 0; i < arrowWrappers.length; i++) {
-                arrowWrappers[i].style.transform = "rotate(180deg)"
-            }
-        } else {
-            listText.style.display = 'none';
-            for (var i = 0; i < arrowWrappers.length; i++) {
-                arrowWrappers[i].style.transform = "rotate(0deg)"
-            }
-        }
-    }
+
+for (var i = 0; i < arrowWrappers.length; i++) {
+    arrowWrappers[i].addEventListener('click', toggleListTextDisplay);
+}
+
+
+function toggleListTextDisplay(event) {
    
+    var listItemHeader = this.closest('.list-item__header');
+    
+    var listText = listItemHeader.nextElementSibling;
+    var arrowWrapper = this;
+
+    if (listText.style.display === 'none' || listText.style.display === '') {
+        listText.style.display = 'block';
+        arrowWrapper.style.transform = 'rotate(180deg)';
+    } else {
+        listText.style.display = 'none';
+        arrowWrapper.style.transform = 'rotate(0deg)';
+    }
+}
 
 function openForm(){
     formBtn.forEach((item) =>{
@@ -42,6 +43,7 @@ function openForm(){
     })
    
 }
+
 
 openForm()
 
