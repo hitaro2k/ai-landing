@@ -751,34 +751,49 @@ main{
                         border-radius: 5px;
                         padding-top: 10px;
                         padding-bottom: 10px;
-                        height: 50px;
+                        height: 100%;
                         display: flex;
-                        flex-direction: row;
+                        flex-direction: column;
                         align-items: center;
                         justify-content: space-between;
                         @include breakpoint(sm){
                             height: 100%; 
                         }
                         
-                        .list-item__num-title{
-                           
+                        .list-item__header{
                             display: flex;
                             flex-direction: row;
                             align-items: center;
-                            width: 80%;
-                            .list-num{
-                                font-weight: 700;
-                                font-size: 25px;
-                                line-height: 71px;
-                                color: #633DFF;
-                                margin-left: 30px;
-                                
+                            width: 100%;
+                            justify-content: space-between;
+                            .list-item__num-title{
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;
+                                width: 80%;
+                                .list-num{
+                                    font-weight: 700;
+                                    font-size: 25px;
+                                    line-height: 71px;
+                                    color: #633DFF;
+                                    margin-left: 30px;
+                                    
+                                }
+                                .list-title{
+                                    color: white; 
+                                    margin-left: 30px;
+                                }
                             }
-                            .list-title{
-                                color: white; 
-                                margin-left: 30px;
+                            .arrow-wrapper{
+                                cursor: pointer;
                             }
                         }
+                        .list-text{
+                            display: none;
+                            padding-left: 30px;
+                        }
+                        
+                       
                     .arrow-wrapper{
                         margin-right: 30px;
                     }
@@ -1114,4 +1129,6 @@ main{
  
 }
    
-
+.arrow-rotate {
+    transform: rotate(180deg);
+}
