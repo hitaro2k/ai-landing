@@ -881,6 +881,7 @@ main .faq .container .faq-bottom .list .list-item .list-item__header .arrow-wrap
 main .faq .container .faq-bottom .list .list-item .list-text {
   display: none;
   padding-left: 30px;
+  padding-right: 30px;
 }
 main .faq .container .faq-bottom .list .list-item .arrow-wrapper {
   margin-right: 30px;
